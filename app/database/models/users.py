@@ -9,9 +9,11 @@ from sqlalchemy.types import DateTime
 class utcnow(expression.FunctionElement):
     type = DateTime()
 
-@compiles(utcnow, 'postgresql')
+
+@compiles(utcnow, "postgresql")
 def pg_utcnow(element, compiler, **kw):
     return "TIMEZONE('utc', CURRENT_TIMESTAMP)"
+
 
 class UserModel(db.Model):
     # Specifying table
@@ -34,7 +36,7 @@ class UserModel(db.Model):
     email_verification_date = db.Column(db.Integer)
 
     def __init__(
-            self, name, firebase_id, username, email, password, terms_and_conditions_checked
+        self, name, firebase_id, username, email, password, terms_and_conditions_checked
     ):
         self.name = name
         self.username = username

@@ -104,6 +104,29 @@ upstream        https://github.com/anitab-org/stem-diverse-tv (fetch)
 upstream        https://github.com/anitab-org/stem-diverse-tv (push)
 ```
 
+### Run tests
+
+To run the unitests run the following command in the terminal (while the virtual environment is activated):
+
+```
+python -m unittest discover tests
+```
+
+### Auto-formatting with black
+
+We use [_Black_](https://github.com/psf/black) to format code automatically so that we don't have to worry about clean and
+readable code. To install _Black_:
+
+```
+pip install black
+```
+
+To run black:
+
+```
+black .
+```
+
 ## YouTube Data API Enabling
 
 **Steps**

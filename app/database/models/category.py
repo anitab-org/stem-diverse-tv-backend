@@ -15,7 +15,7 @@ class CategoryModel(db.Model):
         secondary=category_section,
         backref=db.backref("category", lazy="dynamic"),
         cascade="all, delete",
-        passive_deletes=True
+        passive_deletes=True,
     )
 
     def __init__(self, title):

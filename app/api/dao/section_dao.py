@@ -59,7 +59,7 @@ class SectionDAO:
         return section.update(**kwargs)
 
     @staticmethod
-    def delete_section_by_id(id:int) -> bool:
+    def delete_section_by_id(id: int) -> bool:
         """
         Deletes section by id (if id is valid)
         :param id: id of the section

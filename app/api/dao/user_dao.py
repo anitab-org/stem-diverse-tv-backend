@@ -33,7 +33,7 @@ class UserDAO:
             link = auth.generate_email_verification_link(
                 email, action_code_settings=None
             )
-            
+
             send_email_verification_message(link, email)
 
         except Exception as e:
